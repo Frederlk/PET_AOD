@@ -2,13 +2,45 @@
 // Снипет (HTML): btn
 
 .button {
-	display: inline-flex;
-	padding: 0px 0px;
-	@media (any-hover: hover) {
-		&:hover {
-		}
-	}
-	&._fw {
-		width: 100%;
-	}
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    line-height: math.div(24, 14);
+    letter-spacing: 2.8px;
+    color: #fff;
+    padding: 0px rem(30);
+    text-transform: uppercase;
+    transition: all 0.3s ease 0s;
+    background-color: transparent;
+    &_outline {
+        border: rem(1) solid rgba(255, 255, 255, 0.5);
+        height: rem(50);
+        font-weight: 700;
+        @media (min-width: $pc) {
+            padding: 0px rem(60);
+        }
+        @media (any-hover: hover) {
+            &:hover {
+                background-color: #64c29e;
+
+                border: rem(1) solid rgba(255, 255, 255, 0);
+            }
+        }
+    }
+    &_primary {
+        font-size: rem(24);
+        font-weight: 300;
+        background-color: #64c29e;
+        height: rem(70);
+        @media (any-hover: hover) {
+            &:hover {
+                background-color: #333;
+            }
+        }
+    }
+
+    @media (max-width: $mobileSmall) {
+        width: 100%;
+    }
 }
