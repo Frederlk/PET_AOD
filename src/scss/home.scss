@@ -118,25 +118,37 @@
 //========================================================================================================================================================
 
 .slider {
-    padding: 120px 0px 70px 0px;
+    @include adaptiveValue("padding-top", 120, 40, 1100, 479.98, 1);
+    @include adaptiveValue("padding-bottom", 70, 40, 1100, 479.98, 1);
     background-color: #f7f7f7;
-    @media (max-width: 900px) {
-        padding: 80px 0px;
+    &__container {
     }
-    @media (max-width: 600px) {
-        padding: 40px 0px;
+
+    &__swiper {
     }
+
+    &__wrapper {
+    }
+
     &__item {
         text-align: center;
     }
 
     &__icon {
-        margin: 0px 0px 35px 0px;
+        display: inline-flex;
+        &:not(:last-child) {
+            margin-bottom: rem(35);
+        }
+        img {
+            max-width: 100%;
+        }
     }
 
     &__title {
-        margin: 0px 0px 20px 0px;
-        font-size: 18px;
+        &:not(:last-child) {
+            margin-bottom: rem(20);
+        }
+        font-size: rem(18);
         line-height: 1.2;
         font-weight: 700;
         letter-spacing: 0.1em;
@@ -148,10 +160,35 @@
     }
 
     &__text {
-        font-size: 24px;
-        line-height: 34px;
+        font-size: rem(24);
+        line-height: math.div(34, 24);
         font-style: italic;
         color: #848789;
+    }
+
+    &__pagination {
+        @include adaptiveValue("margin-top", 80, 40, 1100, 767.98, 1);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: rem(15);
+        .swiper-pagination-bullet {
+            width: rem(12);
+            height: rem(12);
+            border-radius: 50%;
+            border: rem(1) solid #c8c8c8;
+            background-color: transparent;
+            transition: all 0.3s ease 0s;
+            cursor: pointer;
+            @media (any-hover: hover) {
+                &:hover {
+                    background-color: #64c29e;
+                }
+            }
+        }
+        .swiper-pagination-bullet-active {
+            background-color: #a9afb3;
+        }
     }
 }
 
