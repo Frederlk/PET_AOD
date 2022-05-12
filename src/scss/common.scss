@@ -1,1 +1,39 @@
-// Заголовки, общие БЄМ блоки и проче...
+.block {
+    text-align: center;
+    &__icon {
+        margin: 0px 0px 33px 0px;
+    }
+
+    &__title {
+        font-size: 18px;
+        line-height: 24px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.2em;
+        color: #353738;
+        margin: 0px 0px 20px 0px;
+    }
+
+    &__text {
+        font-size: 18px;
+        line-height: 34px;
+        color: #848789;
+        &_j {
+            text-align: justify;
+            font-size: 16px;
+            line-height: 30px;
+            &::after {
+                margin: 35px auto 0px auto;
+                content: "";
+                display: block;
+                width: 50px;
+                height: 1px;
+                background-color: rgba(53, 55, 56, 0.2);
+
+                @media (max-width: 1500px) {
+                    margin: 20px auto 0px auto;
+                }
+            }
+        }
+    }
+}
