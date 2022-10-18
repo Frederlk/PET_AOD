@@ -91,14 +91,14 @@
                 if (bodyLockStatus && e.target.closest(".icon-menu")) {
                     bodyLockToggle();
                     document.documentElement.classList.toggle("menu-open");
-                } else if (bodyLockStatus && !e.target.closest(".menu__body")) functions_menuClose();
+                } else if (bodyLockStatus && !e.target.closest(".menu__body")) menuClose();
             }));
             document.addEventListener("keydown", (function(e) {
-                if (bodyLockStatus && 27 == e.which && "Escape" === e.code && document.documentElement.classList.contains("menu-open")) functions_menuClose();
+                if (bodyLockStatus && 27 == e.which && "Escape" === e.code && document.documentElement.classList.contains("menu-open")) menuClose();
             }));
         }
     }
-    function functions_menuClose() {
+    function menuClose() {
         bodyUnlock();
         document.documentElement.classList.remove("menu-open");
     }

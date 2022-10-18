@@ -57,7 +57,6 @@ export function pageNavigation() {
         }
     }
 }
-
 // При подключении модуля обработчик события запустится автоматически
 setTimeout(() => {
     if (addWindowScrollEvent) {

@@ -47,14 +47,6 @@ export function addTouchClass() {
     // Добавление класса _touch для HTML если браузер мобильный
     if (isMobile.any()) document.documentElement.classList.add("touch");
 }
-// Добавление loaded для HTML после полной загрузки страницы
-export function addLoadedClass() {
-    window.addEventListener("load", function () {
-        setTimeout(function () {
-            document.documentElement.classList.add("loaded");
-        }, 0);
-    });
-}
 // Учет плавающей панели на мобильных устройствах при 100vh
 export function fullVHfix() {
     const fullScreens = document.querySelectorAll("[data-fullscreen]");
