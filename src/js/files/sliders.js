@@ -42,21 +42,6 @@ function initSliders() {
             autoHeight: false,
             speed: 800,
             grabCursor: true,
-            //touchRatio: 0,
-            //simulateTouch: false,
-            //loop: true,
-            //preloadImages: false,
-            //lazy: true,
-
-            /*
-			// Эффекты
-			effect: 'fade',
-			autoplay: {
-				delay: 3000,
-				disableOnInteraction: false,
-			},
-			*/
-
             // Пагинация
             pagination: {
                 el: ".swiper-pagination",
@@ -65,45 +50,6 @@ function initSliders() {
                 type: "bullets",
                 clickable: true,
             },
-
-            // Скроллбар
-            /*
-			scrollbar: {
-				el: '.swiper-scrollbar',
-				draggable: true,
-			},
-			*/
-
-            // Кнопки "влево/вправо"
-            // navigation: {
-            //     prevEl: ".swiper-button-prev",
-            //     nextEl: ".swiper-button-next",
-            // },
-
-            // Брейкпоинты
-            /*
-			breakpoints: {
-				320: {
-					slidesPerView: 1,
-					spaceBetween: 0,
-					autoHeight: true,
-				},
-				768: {
-					slidesPerView: 2,
-					spaceBetween: 20,
-				},
-				992: {
-					slidesPerView: 3,
-					spaceBetween: 20,
-				},
-				1268: {
-					slidesPerView: 4,
-					spaceBetween: 30,
-				},
-			},
-			*/
-            // События
-            on: {},
         });
     }
 
@@ -111,56 +57,6 @@ function initSliders() {
         // Эффекты переключения слайдов.
         // Листание
         effect: "slide",
-
-        /*// Эффекты переключения слайдов.
-	// Cмена прозрачности
-	effect: 'fade',
-	// Дополнение к fade
-	fadeEffect: {
-		// Параллельная
-		// смена прозрачности
-		crossFade: true
-	},*/
-
-        /*
-	// Эффекты переключения слайдов.
-	// Переворот
-	effect: 'flip',
-	// Дополнение к flip
-	flipEffect: {
-		// Тень
-		slideShadows: true,
-		// Показ только активного слайда
-		limitRotation: true
-	},
-	*/
-        /*
-	// Эффекты переключения слайдов.
-	// Куб
-	effect: 'cube',
-	// Дополнение к cube
-	cubeEffect: {
-		// Настройки тени
-		slideShadows: true,
-		shadow: true,
-		shadowOffset: 20,
-		shadowScale: 0.94
-	},
-	*/
-        /*
-	// Эффекты переключения слайдов.
-	// Эффект потока
-	effect: 'coverflow',
-	// Дополнение к coverflow
-	coverflowEffect: {
-		// Угол
-		rotate: 20,
-		// Наложение
-		stretch: 50,
-		// Тень
-		slideShadows: true,
-	},
-	*/
 
         // Arrows
         navigation: {
@@ -187,35 +83,7 @@ function initSliders() {
             // Буллеты
             type: "bullets",
             clickable: true,
-            // Динамические буллеты
-            //dynamicBullets: true,
-            // Кастомные буллеты
-            /*renderBullet: function (index, className) {
-			return '<span class="' + className + '">' + (index + 1) + '</span>';
-		},*/
-
-            /*
-		// Фракция
-		type: 'fraction',
-		// Кастомный вывод фракции
-		renderFraction: function (currentClass, totalClass) {
-			return 'Фото <span class="' + currentClass + '"></span>' +
-				' из ' +
-				'<span class="' + totalClass + '"></span>';
-		},
-		*/
-            // Прогрессбар
-            //type: 'progressbar'
         },
-
-        // Скролл
-        /*
-	scrollbar: {
-		el: '.swiper-scrollbar',
-		// Возможность перетаскивать скролл
-		draggable: true
-	},
-	*/
 
         // Включение/отключение
         // перетаскивания на ПК
@@ -303,38 +171,6 @@ function initSliders() {
     });
 }
 
-// Скролл на базе слайдера (по классу swiper_scroll для оболочки слайдера)
-function initSlidersScroll() {
-    let sliderScrollItems = document.querySelectorAll(".swiper_scroll");
-    if (sliderScrollItems.length > 0) {
-        for (let index = 0; index < sliderScrollItems.length; index++) {
-            const sliderScrollItem = sliderScrollItems[index];
-            const sliderScrollBar = sliderScrollItem.querySelector(".swiper-scrollbar");
-            const sliderScroll = new Swiper(sliderScrollItem, {
-                observer: true,
-                observeParents: true,
-                direction: "vertical",
-                slidesPerView: "auto",
-                freeMode: {
-                    enabled: true,
-                },
-                scrollbar: {
-                    el: sliderScrollBar,
-                    draggable: true,
-                    snapOnRelease: false,
-                },
-                mousewheel: {
-                    releaseOnEdges: true,
-                },
-            });
-            sliderScroll.scrollbar.updateSize();
-        }
-    }
-}
-
 window.addEventListener("load", function (e) {
-    // Запуск инициализации слайдеров
     initSliders();
-    // Запуск инициализации скролла на базе слайдера (по классу swiper_scroll)
-    //initSlidersScroll();
 });

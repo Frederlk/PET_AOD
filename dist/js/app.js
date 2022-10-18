@@ -1,6 +1,5 @@
 (() => {
     "use strict";
-    const flsModules = {};
     function isWebp() {
         function testWebP(callback) {
             let webP = new Image;
@@ -36,9 +35,6 @@
     };
     function addTouchClass() {
         if (isMobile.any()) document.documentElement.classList.add("touch");
-    }
-    function getHash() {
-        if (location.hash) return location.hash.replace("#", "");
     }
     function fullVHfix() {
         const fullScreens = document.querySelectorAll("[data-fullscreen]");
@@ -95,22 +91,18 @@
                 if (bodyLockStatus && e.target.closest(".icon-menu")) {
                     bodyLockToggle();
                     document.documentElement.classList.toggle("menu-open");
-                } else if (bodyLockStatus && !e.target.closest(".menu__body")) menuClose();
+                } else if (bodyLockStatus && !e.target.closest(".menu__body")) functions_menuClose();
             }));
             document.addEventListener("keydown", (function(e) {
-                if (bodyLockStatus && 27 == e.which && "Escape" === e.code && document.documentElement.classList.contains("menu-open")) menuClose();
+                if (bodyLockStatus && 27 == e.which && "Escape" === e.code && document.documentElement.classList.contains("menu-open")) functions_menuClose();
             }));
         }
     }
-    function menuClose() {
+    function functions_menuClose() {
         bodyUnlock();
         document.documentElement.classList.remove("menu-open");
     }
-    function FLS(message) {
-        setTimeout((() => {
-            if (window.FLS) console.log(message);
-        }), 0);
-    }
+    const flsModules = {};
     let gotoBlock = (targetBlock, noHeader = false, speed = 500, offsetTop = 0) => {
         const targetBlockElement = document.querySelector(targetBlock);
         if (targetBlockElement) {
@@ -120,25 +112,15 @@
                 headerItem = "header.header";
                 headerItemHeight = document.querySelector(headerItem).offsetHeight;
             }
-            let options = {
-                speedAsDuration: true,
-                speed,
-                header: headerItem,
-                offset: offsetTop,
-                easing: "easeOutQuad"
-            };
             document.documentElement.classList.contains("menu-open") ? menuClose() : null;
-            if ("undefined" !== typeof SmoothScroll) (new SmoothScroll).animateScroll(targetBlockElement, "", options); else {
-                let targetBlockElementPosition = targetBlockElement.getBoundingClientRect().top + scrollY;
-                targetBlockElementPosition = headerItemHeight ? targetBlockElementPosition - headerItemHeight : targetBlockElementPosition;
-                targetBlockElementPosition = offsetTop ? targetBlockElementPosition - offsetTop : targetBlockElementPosition;
-                window.scrollTo({
-                    top: targetBlockElementPosition,
-                    behavior: "smooth"
-                });
-            }
-            FLS(`[gotoBlock]: Юхуу...едем к ${targetBlock}`);
-        } else FLS(`[gotoBlock]: Ой ой..Такого блока нет на странице: ${targetBlock}`);
+            let targetBlockElementPosition = targetBlockElement.getBoundingClientRect().top + scrollY;
+            targetBlockElementPosition = headerItemHeight ? targetBlockElementPosition - headerItemHeight : targetBlockElementPosition;
+            targetBlockElementPosition = offsetTop ? targetBlockElementPosition - offsetTop : targetBlockElementPosition;
+            window.scrollTo({
+                top: targetBlockElementPosition,
+                behavior: "smooth"
+            });
+        }
     };
     function formFieldsInit(options = {
         viewPass: false
@@ -169,14 +151,6 @@
                 if (targetElement.hasAttribute("data-validate")) formValidate.validateInput(targetElement);
             }
         }));
-        if (options.viewPass) document.addEventListener("click", (function(e) {
-            let targetElement = e.target;
-            if (targetElement.closest('[class*="__viewpass"]')) {
-                let inputType = targetElement.classList.contains("_viewpass-active") ? "password" : "text";
-                targetElement.parentElement.querySelector("input").setAttribute("type", inputType);
-                targetElement.classList.toggle("_viewpass-active");
-            }
-        }));
     }
     let formValidate = {
         getErrors(form) {
@@ -195,9 +169,6 @@
                     this.addError(formRequiredItem);
                     error++;
                 } else this.removeError(formRequiredItem);
-            } else if ("checkbox" === formRequiredItem.type && !formRequiredItem.checked) {
-                this.addError(formRequiredItem);
-                error++;
             } else if (!formRequiredItem.value) {
                 this.addError(formRequiredItem);
                 error++;
@@ -303,10 +274,6 @@
                 }
             }), 0);
             formValidate.formClean(form);
-            formLogging(`Форма отправлена!`);
-        }
-        function formLogging(message) {
-            FLS(`[Формы]: ${message}`);
         }
     }
     function ssr_window_esm_isObject(obj) {
@@ -2711,7 +2678,7 @@
         $el.addClass([ ...classNames ].join(" "));
         swiper.emitContainerClasses();
     }
-    function removeClasses_removeClasses() {
+    function removeClasses() {
         const swiper = this;
         const {$el, classNames} = swiper;
         $el.removeClass(classNames.join(" "));
@@ -2719,7 +2686,7 @@
     }
     const classes = {
         addClasses,
-        removeClasses: removeClasses_removeClasses
+        removeClasses
     };
     function loadImage(imageEl, src, srcset, sizes, checkForComplete, callback) {
         const window = ssr_window_esm_getWindow();
@@ -2907,7 +2874,7 @@
         images: core_images
     };
     const extendedDefaults = {};
-    class core_Swiper {
+    class Swiper {
         constructor() {
             let el;
             let params;
@@ -2922,7 +2889,7 @@
                     const newParams = utils_extend({}, params, {
                         el: containerEl
                     });
-                    swipers.push(new core_Swiper(newParams));
+                    swipers.push(new Swiper(newParams));
                 }));
                 return swipers;
             }
@@ -3248,26 +3215,26 @@
             return defaults;
         }
         static installModule(mod) {
-            if (!core_Swiper.prototype.__modules__) core_Swiper.prototype.__modules__ = [];
-            const modules = core_Swiper.prototype.__modules__;
+            if (!Swiper.prototype.__modules__) Swiper.prototype.__modules__ = [];
+            const modules = Swiper.prototype.__modules__;
             if ("function" === typeof mod && modules.indexOf(mod) < 0) modules.push(mod);
         }
         static use(module) {
             if (Array.isArray(module)) {
-                module.forEach((m => core_Swiper.installModule(m)));
-                return core_Swiper;
+                module.forEach((m => Swiper.installModule(m)));
+                return Swiper;
             }
-            core_Swiper.installModule(module);
-            return core_Swiper;
+            Swiper.installModule(module);
+            return Swiper;
         }
     }
     Object.keys(prototypes).forEach((prototypeGroup => {
         Object.keys(prototypes[prototypeGroup]).forEach((protoMethod => {
-            core_Swiper.prototype[protoMethod] = prototypes[prototypeGroup][protoMethod];
+            Swiper.prototype[protoMethod] = prototypes[prototypeGroup][protoMethod];
         }));
     }));
-    core_Swiper.use([ Resize, Observer ]);
-    const core = core_Swiper;
+    Swiper.use([ Resize, Observer ]);
+    const core = Swiper;
     function create_element_if_not_defined_createElementIfNotDefined(swiper, originalParams, params, checkProps) {
         const document = ssr_window_esm_getDocument();
         if (swiper.params.createElements) Object.keys(checkProps).forEach((key => {
@@ -3554,8 +3521,7 @@
                 el: ".swiper-pagination",
                 type: "bullets",
                 clickable: true
-            },
-            on: {}
+            }
         });
         new core(".slider__body", {
             effect: "slide",
@@ -3647,11 +3613,6 @@
                 }
             }
         }
-        if (getHash()) {
-            let goToHash;
-            if (document.querySelector(`#${getHash()}`)) goToHash = `#${getHash()}`; else if (document.querySelector(`.${getHash()}`)) goToHash = `.${getHash()}`;
-            goToHash ? gotoBlock(goToHash, true, 500, 20) : null;
-        }
     }
     setTimeout((() => {
         if (addWindowScrollEvent) {
@@ -3661,7 +3622,6 @@
             }));
         }
     }), 0);
-    window["FLS"] = true;
     isWebp();
     addTouchClass();
     menuInit();

@@ -1,162 +1,368 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-	<meta charset="UTF-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<title>Верстка «11_AOD»</title>
+	<title>AOD</title>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<!-- <style>body{opacity: 0;}</style> -->
+	<link rel="stylesheet" href="css/style.min.css?_v=20221018175952">
+	<link rel="shortcut icon" href="favicon.ico">
+	<!-- <meta name="robots" content="noindex, nofollow"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body>
-	<div class="rootpage">
-		<h1>«11_AOD»</h1>
-		<div class="rootpage__info">Project Features</div>
-		<h2>Pages:</h2>
-		<ol class="rootpage__list">
-			<li><a target="_blank" href="home.html">Home Page</a></li>
-		</ol>
-		<div class="rootpage__contacts">
-			<h2>My contacts:</h2>
-			<p>Email: <a href="mailto:pertrinichshadow@gmail.com">pertrinichshadow@gmail.com</a></p>
-			<p>Phone: <a href="tel:375256474526">+375256474526</a></p>
-			<p>Social network: <a href="">Link to social network</a></p>
-		</div>
+	<div class="wrapper">
+		<header class="header">
+			<div class="header__сontainer">
+				<div class="header__menu menu">
+					<nav class="menu__body">
+						<ul class="menu__list">
+							<li class="menu__item"><a data-goto=".generation" href="" class="menu__link">about us</a></li>
+							<li class="menu__item"><a data-goto=".brands" href="" class="menu__link">work</a></li>
+							<li class="menu__item"><a data-goto=".shop" href="" class="menu__link">shop</a></li>
+							<li class="menu__item"><a data-goto=".subscribe" href="" class="menu__link">contact</a></li>
+						</ul>
+					</nav>
+				</div>
+				<div class="header__logo">
+					<picture><source srcset="img/Logo01.webp" type="image/webp"><img src="img/Logo01.png" alt="Logo" /></picture>
+				</div>
+				<button type="button" class="header__icon icon-menu"><span></span></button>
+			</div>
+		</header>
+
+		<main class="page">
+			<div class="main-screen">
+				<div data-fullscreen class="main-screen__bg-ibg">
+					<picture><source srcset="img/bg_1.webp" type="image/webp"><img src="img/bg_1.jpg" alt="background" /></picture>
+				</div>
+			</div>
+
+			<section class="generation">
+				<div class="generation__container">
+					<div class="generation__block block">
+						<div class="block__icon">
+							<picture><source srcset="img/icons/02.webp" type="image/webp"><img src="img/icons/02.png" alt="chain icon" /></picture>
+						</div>
+						<h1 class="block__title">A NEW GENERATION OF VINTAGE BIKE</h1>
+						<div class="block__text">
+							Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+							the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of
+							type and scrambled it to make a type specimen book. It has survived not only five centuries, but
+							also the leap into electronic typesetting, remaining essentially unchanged.
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="brands">
+				<div class="brands__row">
+					<div class="brands__column brands__column_b">
+						<a href="#" class="brands__item item">
+							<span class="item__logo">
+								<picture><source srcset="img/VintageToRetro/ic01.webp" type="image/webp"><img src="img/VintageToRetro/ic01.png" alt="logo" /></picture>
+							</span>
+							<span class="item__image-ibg">
+								<picture><source srcset="img/VintageToRetro/01.webp" type="image/webp"><img src="img/VintageToRetro/01.jpg" alt="Vintage Bike" /></picture>
+							</span>
+						</a>
+					</div>
+					<div class="brands__column">
+						<div class="brands__content block">
+							<div class="block__icon">
+								<picture><source srcset="img/icons/03.webp" type="image/webp"><img src="img/icons/03.png" alt="Chassis" /></picture>
+							</div>
+							<h2 class="block__title">vintage Oliva</h2>
+							<div class="block__text block__text_j">
+								Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+								been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
+								galley of type and scrambled it to make a type specimen book. It has survived.
+							</div>
+						</div>
+						<div class="brands__image-ibg">
+							<picture><source srcset="img/VintageToRetro/02.webp" type="image/webp"><img src="img/VintageToRetro/02.jpg" alt="Vintage Seat" /></picture>
+						</div>
+					</div>
+				</div>
+
+				<div class="brands__row">
+					<div class="brands__column brands__column_b">
+						<a href="#" class="brands__item item">
+							<span class="item__logo">
+								<picture><source srcset="img/VintageToRetro/ic02.webp" type="image/webp"><img src="img/VintageToRetro/ic02.png" alt="Logo" /></picture>
+							</span>
+							<span class="item__image-ibg">
+								<picture><source srcset="img/VintageToRetro/03.webp" type="image/webp"><img src="img/VintageToRetro/03.jpg" alt="Vintage Bike" /></picture>
+							</span>
+						</a>
+					</div>
+					<div class="brands__column">
+						<div class="brands__content block">
+							<div class="block__icon">
+								<picture><source srcset="img/icons/04.webp" type="image/webp"><img src="img/icons/04.png" alt="Pedals" /></picture>
+							</div>
+							<h2 class="block__title">La Boriosa</h2>
+							<div class="block__text block__text_j">
+								Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+								been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
+								galley of type and scrambled it to make a type specimen book. It has survived..
+							</div>
+						</div>
+						<div class="brands__image-ibg">
+							<picture><source srcset="img/VintageToRetro/04.webp" type="image/webp"><img src="img/VintageToRetro/04.jpg" alt="Vintage Bike" /></picture>
+						</div>
+					</div>
+				</div>
+
+				<div class="brands__row">
+					<div class="brands__column">
+						<a href="#" class="brands__item item">
+							<span class="item__logo">
+								<picture><source srcset="img/VintageToRetro/ic03.webp" type="image/webp"><img src="img/VintageToRetro/ic03.png" alt="logo" /></picture>
+							</span>
+							<span class="item__image-ibg">
+								<picture><source srcset="img/VintageToRetro/05.webp" type="image/webp"><img src="img/VintageToRetro/05.jpg" alt="Vintage Bike" /></picture>
+							</span>
+						</a>
+					</div>
+					<div class="brands__column">
+						<div class="brands__content block">
+							<div class="block__icon">
+								<picture><source srcset="img/icons/05.webp" type="image/webp"><img src="img/icons/05.png" alt="" /></picture>
+							</div>
+							<h2 class="block__title">retrò Bike - M. Hulot</h2>
+							<div class="block__text block__text_j">
+								Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+								been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
+								galley of type and scrambled it to make a type specimen book. It has survived.
+							</div>
+						</div>
+						<div class="brands__image-ibg">
+							<picture><source srcset="img/VintageToRetro/06.webp" type="image/webp"><img src="img/VintageToRetro/06.jpg" alt="Vintage Bike" /></picture>
+						</div>
+					</div>
+					<div class="brands__column">
+						<a href="#" class="brands__item item">
+							<span class="item__logo">
+								<picture><source srcset="img/VintageToRetro/ic03.webp" type="image/webp"><img src="img/VintageToRetro/ic03.png" alt="logo" /></picture>
+							</span>
+							<span class="item__image-ibg">
+								<picture><source srcset="img/VintageToRetro/07.webp" type="image/webp"><img src="img/VintageToRetro/07.jpg" alt="Vintage Bike" /></picture>
+							</span>
+						</a>
+					</div>
+				</div>
+			</section>
+
+			<section class="slider">
+				<div class="slider__container">
+					<div class="slider__swiper swiper">
+						<div class="slider__wrapper swiper-wrapper">
+							<article class="slider__item swiper-slide">
+								<a href="#" class="slider__icon">
+									<picture><source srcset="img/icons/socialTW.webp" type="image/webp"><img src="img/icons/socialTW.png" alt="Twitter" /></picture>
+								</a>
+								<h3 class="slider__title">
+									AOD New York @aod
+									<span>/ 35 min</span>
+								</h3>
+								<div class="slider__text">
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut tellus ac nulla semper
+									rhoncus. Nullam a odio porttitor, dictum turpis vitae, pretium ante amet.
+								</div>
+							</article>
+							<article class="slider__item swiper-slide">
+								<a href="#" class="slider__icon">
+									<picture><source srcset="img/icons/soctialFB.webp" type="image/webp"><img src="img/icons/soctialFB.png" alt="Facebook" /></picture>
+								</a>
+								<h3 class="slider__title">
+									AOD New York @aod
+									<span>/ 35 min</span>
+								</h3>
+								<div class="slider__text">
+									Lorem ipsum dolor Lorem ipsum dolor sit amet. sit amet, consectetur adipiscing elit. Sed
+									ut tellus ac nulla semper rhoncus. Nullam a odio porttitor, dictum turpis vitae, pretium
+									ante amet.
+								</div>
+							</article>
+							<article class="slider__item swiper-slide">
+								<a href="#" class="slider__icon">
+									<picture><source srcset="img/icons/socialP.webp" type="image/webp"><img src="img/icons/socialP.png" alt="Pinterest" /></picture>
+								</a>
+								<h3 class="slider__title">
+									AOD New York @aod
+									<span>/ 35 min</span>
+								</h3>
+								<div class="slider__text">
+									Lorem ipsum dolor sit amet, dictum turpis vitae, pretium ante amet.
+								</div>
+							</article>
+						</div>
+					</div>
+					<div class="slider__pagination swiper-pagination"></div>
+				</div>
+			</section>
+
+			<section class="shop">
+				<div class="shop__body">
+					<div class="shop__column shop__column_b">
+						<div class="shop__block block-shop">
+							<div class="block-shop__row">
+								<div class="block-shop__column">
+									<a href="#" class="block-shop__item block-shop__item_l item">
+										<span class="item__logo">
+											<picture><source srcset="img/Gallery/ic01.webp" type="image/webp"><img src="img/Gallery/ic01.png" alt="icon" /></picture>
+											<span>Shop Now</span>
+										</span>
+										<span class="item__image-ibg">
+											<picture><source srcset="img/Gallery/01.webp" type="image/webp"><img src="img/Gallery/01.jpg" alt="vintage" /></picture>
+										</span>
+									</a>
+								</div>
+								<div class="block-shop__column">
+									<a href="#" class="block-shop__item block-shop__item_l item">
+										<span class="item__logo">
+											<picture><source srcset="img/Gallery/ic01.webp" type="image/webp"><img src="img/Gallery/ic01.png" alt="icon" /></picture>
+											<span>Shop Now</span>
+										</span>
+										<span class="item__image-ibg">
+											<picture><source srcset="img/Gallery/02.webp" type="image/webp"><img src="img/Gallery/02.jpg" alt="vintage" /></picture>
+										</span>
+									</a>
+								</div>
+							</div>
+							<a href="#" class="block-shop__item item">
+								<span class="item__logo">
+									<picture><source srcset="img/Gallery/ic01.webp" type="image/webp"><img src="img/Gallery/ic01.png" alt="icon" /></picture>
+									<span>Shop Now</span>
+								</span>
+								<span class="item__image-ibg">
+									<picture><source srcset="img/Gallery/03.webp" type="image/webp"><img src="img/Gallery/03.jpg" alt="vintage" /></picture>
+								</span>
+							</a>
+						</div>
+					</div>
+					<div class="shop__column">
+						<a href="#" class="block-shop__item block-shop__item_b item">
+							<span class="item__logo">
+								<picture><source srcset="img/Gallery/ic01.webp" type="image/webp"><img src="img/Gallery/ic01.png" alt="icon" /></picture>
+								<span>Shop Now</span>
+							</span>
+							<span class="item__image-ibg">
+								<picture><source srcset="img/Gallery/04.webp" type="image/webp"><img src="img/Gallery/04.jpg" alt="vintage" /></picture>
+							</span>
+						</a>
+					</div>
+					<div class="shop__column">
+						<a href="#" class="block-shop__item block-shop__item_b item">
+							<span class="item__logo">
+								<picture><source srcset="img/Gallery/ic01.webp" type="image/webp"><img src="img/Gallery/ic01.png" alt="icon" /></picture>
+								<span>Shop Now</span>
+							</span>
+							<span class="item__image-ibg">
+								<picture><source srcset="img/Gallery/05.webp" type="image/webp"><img src="img/Gallery/05.jpg" alt="vintage" /></picture>
+							</span>
+						</a>
+					</div>
+					<div class="shop__column shop__column_b">
+						<div class="shop__block block-shop">
+							<a href="#" class="block-shop__item item">
+								<span class="item__logo">
+									<picture><source srcset="img/Gallery/ic01.webp" type="image/webp"><img src="img/Gallery/ic01.png" alt="icon" /></picture>
+									<span>Shop Now</span>
+								</span>
+								<span class="item__image-ibg">
+									<picture><source srcset="img/Gallery/06.webp" type="image/webp"><img src="img/Gallery/06.jpg" alt="vintage" /></picture>
+								</span>
+							</a>
+							<div class="block-shop__row">
+								<div class="block-shop__column">
+									<a href="#" class="block-shop__item block-shop__item_l item">
+										<span class="item__logo">
+											<picture><source srcset="img/Gallery/ic01.webp" type="image/webp"><img src="img/Gallery/ic01.png" alt="icon" /></picture>
+											<span>Shop Now</span>
+										</span>
+										<span class="item__image-ibg">
+											<picture><source srcset="img/Gallery/07.webp" type="image/webp"><img src="img/Gallery/07.jpg" alt="vintage" /></picture>
+										</span>
+									</a>
+								</div>
+								<div class="block-shop__column">
+									<a href="#" class="block-shop__item block-shop__item_l item item">
+										<span class="item__logo">
+											<picture><source srcset="img/Gallery/ic01.webp" type="image/webp"><img src="img/Gallery/ic01.png" alt="icon" /></picture>
+											<span>Shop Now</span>
+										</span>
+										<span class="item__image-ibg">
+											<picture><source srcset="img/Gallery/08.webp" type="image/webp"><img src="img/Gallery/08.jpg" alt="vintage" /></picture>
+										</span>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="shop__footer">
+					<div class="shop__container">
+						<a href="#" class="shop__button button button_outline">DISCOVER THE SHOP</a>
+					</div>
+				</div>
+			</section>
+
+			<section class="subscribe">
+				<div class="subscribe__container">
+					<a href="#" class="subscribe__logo">
+						<picture><source srcset="img/Logo01.webp" type="image/webp"><img src="img/Logo01.png" alt="Logo" /></picture>
+					</a>
+					<h4 class="subscribe__label">Stay on the saddle!</h4>
+					<form action="#" class="subscribe__form">
+						<div class="subscribe__input">
+							<input type="email" name="email" data-required="email" data-error="Error" placeholder="enter your email..." class="input" />
+						</div>
+						<button type="submit" class="subscribe__button button button_primary">GO</button>
+					</form>
+				</div>
+			</section>
+		</main>
+		<footer class="footer">
+			<div class="footer__container">
+				<div class="footer__column">
+					<div class="footer__adress">
+						<p>AOD New York</p>
+						<p>2250 Lexington Avenue</p>
+						<p>New York, NY 10035 - info@domain.com</p>
+					</div>
+				</div>
+
+				<div class="footer__column">
+					<div class="footer__social">
+						<a href="#" class="footer__link">
+							<picture><source srcset="img/icons/socialtw1.webp" type="image/webp"><img src="img/icons/socialtw1.png" alt="Twitter" /></picture>
+						</a>
+						<a href="#" class="footer__link">
+							<picture><source srcset="img/icons/soctialFB.webp" type="image/webp"><img src="img/icons/soctialFB.png" alt="Facebook" /></picture>
+						</a>
+						<a href="#" class="footer__link">
+							<picture><source srcset="img/icons/socialP.webp" type="image/webp"><img src="img/icons/socialP.png" alt="Pinterest" /></picture>
+						</a>
+					</div>
+				</div>
+
+				<div class="footer__column">
+					<a href="#" class="footer__dev dev">
+						<span class="dev__text">Handcrafted by</span>
+						<span class="dev__icon">
+							<picture><source srcset="img/Logo02.webp" type="image/webp"><img src="img/Logo02.png" alt="Logo" /></picture>
+						</span>
+					</a>
+				</div>
+			</div>
+		</footer>
+
 	</div>
+	<script src="js/app.min.js?_v=20221018175952"></script>
 </body>
-<style>
-	@charset "UTF-8";
-	@import url("https://fonts.googleapis.com/css?family=Montserrat:regular,700&display=swap");
-
-	*,
-	*::before,
-	*::after {
-		padding: 0px;
-		margin: 0px;
-		border: 0px;
-		box-sizing: border-box;
-	}
-
-	html,
-	body {
-		height: 100%;
-		margin: 0;
-		padding: 0;
-		min-width: 320px;
-		width: 100%;
-		color: #fff;
-		background-color: #5e5373;
-	}
-
-	body {
-		font-family: Montserrat;
-		font-size: 100%;
-		line-height: 1;
-		font-size: 1rem;
-	}
-
-	a {
-		text-decoration: underline;
-		color: #ebe691;
-	}
-
-	a:visited {
-		text-decoration: underline;
-		color: #aaa768;
-	}
-
-	a:hover {
-		text-decoration: none;
-	}
-
-	ul li {
-		list-style: none;
-	}
-
-	img {
-		vertical-align: top;
-	}
-
-	.wrapper {
-		width: 100%;
-		min-height: 100%;
-		overflow: hidden;
-	}
-
-	.rootpage {
-		padding: 30px;
-		display: flex;
-		flex-direction: column;
-		align-items: flex-start;
-	}
-
-	@media (max-width: 767px) {
-		.rootpage {
-			padding: 30px 15px;
-		}
-	}
-
-	h1 {
-		color: #ebe691;
-		font-size: 2.5rem;
-		margin: 0px 0px 1.25rem 0px;
-	}
-
-	@media (max-width: 767px) {
-		h1 {
-			font-size: 1.85rem;
-			margin: 0px 0px 1.25rem 0px;
-		}
-	}
-
-	h2 {
-		color: #ebe691;
-		font-size: 1.25rem;
-		margin: 0px 0px 1rem 0px;
-	}
-
-	@media (max-width: 767px) {
-		h2 {
-			font-size: 1.125rem;
-			margin: 0px 0px 1rem 0px;
-		}
-	}
-
-	.rootpage__info {
-		line-height: 140%;
-		margin: 0px 0px 1.5rem 0px;
-	}
-
-	.rootpage__list {
-		margin: 0px 0px 2.25rem 1.25rem;
-	}
-
-	.rootpage__list li:not(:last-child) {
-		margin: 0px 0px 15px 0px;
-	}
-
-	.rootpage__contacts,
-	.rootpage__tnx {
-		border-radius: 200px;
-		padding: 20px 65px;
-		line-height: 140%;
-	}
-
-	@media (max-width: 767px) {
-
-		.rootpage__contacts,
-		.rootpage__tnx {
-			border-radius: 40px;
-			padding: 20px;
-		}
-	}
-
-	.rootpage__contacts {
-		background: #32b5a4;
-	}
-
-	.rootpage__contacts a {
-		color: #ebe691;
-	}
-</style>
 
 </html>

@@ -77,6 +77,25 @@ h6 {
   font-size: inherit;
 }
 
+body::-webkit-scrollbar {
+  width: 0.75rem;
+  height: 0.75rem;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: #64c29e;
+  overflow: hidden;
+}
+
+body::-webkit-scrollbar-track {
+  background: #282f35;
+}
+
+body {
+  scrollbar-face-color: #64c29e;
+  scrollbar-track-color: #282f35;
+}
+
 .lock body {
   overflow: hidden;
   -ms-touch-action: none;
@@ -105,13 +124,6 @@ h6 {
 .wrapper > * {
   min-width: 0;
 }
-
-/*
-(i) Стили будут применяться ко 
-всем классам содержащим *__container
-Например header__container, main__container и т.д.
-Снипет (HTML): cnt
-*/
 
 [class*=__container] {
   max-width: 68.75rem;
@@ -314,8 +326,8 @@ textarea {
 @supports not (top: clamp( 0.9375rem , -1.9538167881rem  +  6.02373351vw , 2.1875rem )) {
   .header {
     top: calc(
-			0.9375rem + 1.25 * (100vw - 47.99875rem) / 20.75125
-		);
+            0.9375rem + 1.25 * (100vw - 47.99875rem) / 20.75125
+        );
   }
 }
 
@@ -380,8 +392,8 @@ textarea {
 @supports not (padding-top: clamp( 2.5rem , -6.1739503644rem  +  18.0712005301vw , 6.25rem )) {
   .footer {
     padding-top: calc(
-			2.5rem + 3.75 * (100vw - 47.99875rem) / 20.75125
-		);
+            2.5rem + 3.75 * (100vw - 47.99875rem) / 20.75125
+        );
   }
 }
 
@@ -394,8 +406,8 @@ textarea {
 @supports not (padding-bottom: clamp( 1.875rem , -8.2446087585rem  +  21.0830672851vw , 6.25rem )) {
   .footer {
     padding-bottom: calc(
-			1.875rem + 4.375 * (100vw - 47.99875rem) / 20.75125
-		);
+            1.875rem + 4.375 * (100vw - 47.99875rem) / 20.75125
+        );
   }
 }
 
@@ -480,8 +492,8 @@ textarea {
 @supports not (padding-top: clamp( 2.5rem , -1.3706815909rem  +  12.9028095868vw , 7.5rem )) {
   .generation {
     padding-top: calc(
-			2.5rem + 5 * (100vw - 29.99875rem) / 38.75125
-		);
+            2.5rem + 5 * (100vw - 29.99875rem) / 38.75125
+        );
   }
 }
 
@@ -494,8 +506,8 @@ textarea {
 @supports not (padding-bottom: clamp( 2.5rem , -1.3706815909rem  +  12.9028095868vw , 7.5rem )) {
   .generation {
     padding-bottom: calc(
-			2.5rem + 5 * (100vw - 29.99875rem) / 38.75125
-		);
+            2.5rem + 5 * (100vw - 29.99875rem) / 38.75125
+        );
   }
 }
 
@@ -562,8 +574,8 @@ textarea {
 @supports not (padding-top: clamp( 3.75rem , 0.8469888068rem  +  9.6771071901vw , 7.5rem )) {
   .slider {
     padding-top: calc(
-			3.75rem + 3.75 * (100vw - 29.99875rem) / 38.75125
-		);
+            3.75rem + 3.75 * (100vw - 29.99875rem) / 38.75125
+        );
   }
 }
 
@@ -576,8 +588,8 @@ textarea {
 @supports not (padding-bottom: clamp( 3.75rem , 3.2661648011rem  +  1.6128511983vw , 4.375rem )) {
   .slider {
     padding-bottom: calc(
-			3.75rem + 0.625 * (100vw - 29.99875rem) / 38.75125
-		);
+            3.75rem + 0.625 * (100vw - 29.99875rem) / 38.75125
+        );
   }
 }
 
@@ -645,8 +657,8 @@ textarea {
 @supports not (margin-top: clamp( 1.25rem , -7.4239503644rem  +  18.0712005301vw , 5rem )) {
   .slider__pagination {
     margin-top: calc(
-			1.25rem + 3.75 * (100vw - 47.99875rem) / 20.75125
-		);
+            1.25rem + 3.75 * (100vw - 47.99875rem) / 20.75125
+        );
   }
 }
 
@@ -699,8 +711,8 @@ textarea {
 @supports not (padding-top: clamp( 3.125rem , -0.4889900762rem  +  7.5294401108vw , 4.6875rem )) {
   .shop__footer {
     padding-top: calc(
-			3.125rem + 1.5625 * (100vw - 47.998125rem) / 20.751875
-		);
+            3.125rem + 1.5625 * (100vw - 47.998125rem) / 20.751875
+        );
   }
 }
 
@@ -713,8 +725,8 @@ textarea {
 @supports not (padding-bottom: clamp( 3.125rem , -0.4889900762rem  +  7.5294401108vw , 4.6875rem )) {
   .shop__footer {
     padding-bottom: calc(
-			3.125rem + 1.5625 * (100vw - 47.998125rem) / 20.751875
-		);
+            3.125rem + 1.5625 * (100vw - 47.998125rem) / 20.751875
+        );
   }
 }
 
@@ -756,8 +768,8 @@ textarea {
 @supports not (padding-top: clamp( 3.75rem , -3.4782919704rem  +  15.0593337751vw , 6.875rem )) {
   .subscribe {
     padding-top: calc(
-			3.75rem + 3.125 * (100vw - 47.99875rem) / 20.75125
-		);
+            3.75rem + 3.125 * (100vw - 47.99875rem) / 20.75125
+        );
   }
 }
 
@@ -770,8 +782,8 @@ textarea {
 @supports not (padding-bottom: clamp( 3.75rem , -3.4782919704rem  +  15.0593337751vw , 6.875rem )) {
   .subscribe {
     padding-bottom: calc(
-			3.75rem + 3.125 * (100vw - 47.99875rem) / 20.75125
-		);
+            3.75rem + 3.125 * (100vw - 47.99875rem) / 20.75125
+        );
   }
 }
 
@@ -883,8 +895,8 @@ textarea {
 @supports not (padding-right: clamp( 5.625rem , 2.7336832119rem  +  6.02373351vw , 6.875rem )) {
     .menu__item:nth-child(2) {
       padding-right: calc(
-			5.625rem + 1.25 * (100vw - 47.99875rem) / 20.75125
-		);
+            5.625rem + 1.25 * (100vw - 47.99875rem) / 20.75125
+        );
     }
 }
 
@@ -897,8 +909,8 @@ textarea {
 @supports not (padding-left: clamp( 5.625rem , 2.7336832119rem  +  6.02373351vw , 6.875rem )) {
     .menu__item:nth-child(3) {
       padding-left: calc(
-			5.625rem + 1.25 * (100vw - 47.99875rem) / 20.75125
-		);
+            5.625rem + 1.25 * (100vw - 47.99875rem) / 20.75125
+        );
     }
 }
 
